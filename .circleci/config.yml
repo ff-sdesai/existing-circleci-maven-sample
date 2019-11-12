@@ -18,3 +18,16 @@ jobs: # a collection of steps
         - store_test_results: # uploads the test metadata from the `target/surefire-reports` directory so that it can show up in the CircleCI dashboard. 
         # Upload test results for display in Test Summary: https://circleci.com/docs/2.0/collect-test-data/
             path: target/surefire-reports
+workflows: # The following yaml will schedule this maven build operation to run every day at 12:00am UTC
+  version: 2
+  commit:
+    jobs:
+      - build
+  nightly:
+    triggers:
+      - schedule:
+          cron: "0 0 * * *"
+          filters:
+            branches:
+              only:
+                - master           
