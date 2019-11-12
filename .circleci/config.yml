@@ -30,4 +30,6 @@ workflows: # The following yaml will schedule this maven build operation to run 
           filters:
             branches:
               only:
-                - master           
+                - master      
+    jobs:
+      - build     
