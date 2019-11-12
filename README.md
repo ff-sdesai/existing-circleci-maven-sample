@@ -51,4 +51,7 @@ TestNG Plugin is built-in in the IntelliJ IDEA, from version 7 onwards.
 * The Maven will automatically kick start the parallel execution of different examples inside perfecto packaage in parallel.
 
 ### Circle CI Integration:
-Coming soon.
+* This project contains a .yml file under .circleci / config.yml which will help CircleCI’s webhooks to listen for git updates. 
+* It will also print the suite level report at the end of execution.
+* It is configured to schedule everyday at 12:00am UTC. 
+* The current build status of CircleCI in github will be showcased in readme.md file. Here's [how](https://circleci.com/docs/2.0/status-badges/) to set it up.
