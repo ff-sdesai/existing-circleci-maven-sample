@@ -27,7 +27,6 @@ TestNG Plugin is built-in in the IntelliJ IDEA, from version 7 onwards.
  
 #### Optional Installations
 * For source control management, you can install [git](https://git-scm.com/downloads).
-* To be able to interact with a real device from Perfecto cloud directly from your IDE, and use Perfecto Reporting, install [Perfecto CQ Lab Plugin](https://www.perfectomobile.com/ni/resources/downloads/add-ins-plugins-and-extensions) for your IDE.
 
 ## Downloading the Sample Project
 
