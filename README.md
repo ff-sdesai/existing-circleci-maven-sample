@@ -47,7 +47,7 @@ TestNG Plugin is built-in in the IntelliJ IDEA, from version 7 onwards.
 		-DcloudName=${cloudName}
 		-DsecurityToken=${securityToken}
 
-* The Maven will automatically kick start the parallel execution of different examples inside perfecto packaage in parallel.
+* Maven will take care of kick starting the parallel execution of different examples inside perfecto package in parallel.
 
 ### Circle CI Integration:
 * This project contains a .yml file under .circleci / config.yml which will help CircleCI’s webhooks to listen for git updates. 
