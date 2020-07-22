@@ -33,7 +33,7 @@ public class PerfectoAppium {
 		String browserName = "mobileOS";
 		DesiredCapabilities capabilities = new DesiredCapabilities(browserName, "", Platform.ANY);
 		capabilities.setCapability("securityToken", securityToken);
-		capabilities.setCapability("model", "Galaxy Tab.*");
+		capabilities.setCapability("model", "Galaxy.*");
 		capabilities.setCapability("openDeviceTimeout", 2);
 		capabilities.setCapability("appPackage", "com.sec.android.app.popupcalculator");
 
@@ -60,14 +60,14 @@ public class PerfectoAppium {
 		try {
 			reportiumClient.testStart("My Calculator Test", new TestContext("tag2", "tag3"));
 			reportiumClient.stepStart("Perform addition");
-			driver.findElement(By.xpath("//*[contains(@resource-id,'popupcalculator:id/bt_01')]")).click();
+			driver.findElement(By.xpath("//*[contains(@resource-id,'popupcalculator:id/bt_01') or @text='1']")).click();
 			driver.findElement(By.xpath("//*[contains(@resource-id,'add')]")).click();
-			driver.findElement(By.xpath("//*[contains(@resource-id,'popupcalculator:id/bt_01')]")).click();
+			driver.findElement(By.xpath("//*[contains(@resource-id,'popupcalculator:id/bt_01') or @text='1']")).click();
 			driver.findElement(By.xpath("//*[contains(@resource-id,'equal')]")).click();
 			reportiumClient.stepEnd();
 
 			reportiumClient.stepStart("Verify Total");
-			WebElement results=driver.findElement(By.xpath("//*[contains(@class,'EditText')]"));
+			WebElement results=driver.findElement(By.xpath("//*[contains(@class,'EditText')] | //*[@resource-id='com.sec.android.app.popupcalculator:id/calc_edt_formula']"));
 			if (!results.getText().equals("2"))
 				throw new RuntimeException("Actual calculated number is : " + results.getText() + ". It did not match with expected value: 2");
 			reportiumClient.stepEnd();
