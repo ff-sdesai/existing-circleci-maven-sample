@@ -33,7 +33,7 @@ public class PerfectoAppium {
 		String browserName = "mobileOS";
 		DesiredCapabilities capabilities = new DesiredCapabilities(browserName, "", Platform.ANY);
 		capabilities.setCapability("securityToken", securityToken);
-		capabilities.setCapability("model", "Galaxy.*");
+		capabilities.setCapability("model", "Galaxy Tab.*");
 		capabilities.setCapability("openDeviceTimeout", 2);
 		capabilities.setCapability("appPackage", "com.sec.android.app.popupcalculator");
 
