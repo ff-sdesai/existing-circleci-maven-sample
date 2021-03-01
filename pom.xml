@@ -67,7 +67,7 @@
 		</plugins>
 	</build>
 
-	<repositories>
+<repositories>
 		<repository>
 			<id>repo1.perfectomobile.com</id>
 			<name>Perfecto mobile</name>
@@ -102,6 +102,7 @@
 		</pluginRepository>
 	</pluginRepositories>
 
+
 	<dependencies>
 		<!-- Reporting SDK -->
 		<dependency>
@@ -133,7 +134,7 @@
 		<dependency>
 			<groupId>dom4j</groupId>
 			<artifactId>dom4j</artifactId>
-			<version>1.6.1</version>
+			<version>RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>jaxen</groupId>
